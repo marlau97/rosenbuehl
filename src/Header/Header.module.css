@@ -1,0 +1,13 @@
+#header {
+    background-color: antiquewhite;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+}
+
+#headerText {
+    color: darkslategrey;
+}

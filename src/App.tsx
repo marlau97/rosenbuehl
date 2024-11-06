@@ -1,18 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Header/Header";
+import Booking from "./Booking/Booking";
+import  "./App.css"
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Coming soonTM
-        </p>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            <div>
+                <Header></Header>
+            </div>
+            <div className='content'>
+                <Booking></Booking>
+            </div>
+        </div>
+    );
 }
 
 export default App;
