@@ -43,9 +43,14 @@ i18n
                 // More details about namespaces shortly.
                 translation: {
                     hello_world: "Hello, World!",
-                    bookingText: "Book your stay through booking.com now!",
+                    landingHeadline: "Home",
                     houseRosenbuehl: "Haus Rosenbühl",
                     landingPage: "Homepage",
+                    landingSubHeadline: "Welcome to House Rosenbühl",
+                    landingText: "Experience relaxing days in our cozy holiday apartments, surrounded by the picturesque nature of the region.\n" +
+                        "Whether you’re seeking a peaceful retreat or a base for exploration, our accommodations offer the perfect home for your getaway.\n" +
+                        "Enjoy fresh air, hiking trails just outside your door, and proximity to local attractions.\n" +
+                        "Leave the everyday behind and create unforgettable memories in the heart of Warmensteinach.",
                     vacationApartments: "Holiday Apartments",
                     location: "Location",
                     ourHouse: "Our House",
@@ -78,9 +83,14 @@ i18n
             de: {
                 translation: {
                     hello_world: "Hallo, Welt!",
-                    bookingText: "Buchen Sie jetzt Ihren Aufenthalt über booking.com!",
+                    landingHeadline: "Startseite",
                     houseRosenbuehl: "Haus Rosenbühl",
                     landingPage: "Startseite",
+                    landingSubHeadline: "Willkommen im Haus Rosenbühl",
+                    landingText: "Erleben Sie entspannte Urlaubstage in unseren gemütlichen Ferienwohnungen, umgeben von der malerischen Natur der Region.\n" +
+                        "Ob für einen ruhigen Rückzugsort oder als Ausgangspunkt für Ihre Entdeckungstouren – bei uns finden Sie das perfekte Zuhause für Ihre Auszeit.\n" +
+                        "Genießen Sie die frische Luft, Wanderwege direkt vor der Tür und die Nähe zu Sehenswürdigkeiten.\n" +
+                        "Lassen Sie den Alltag hinter sich und erleben Sie eine unvergessliche Zeit im Herzen von Warmensteinach.",
                     vacationApartments: "Ferienwohnungen",
                     location: "Lage",
                     ourHouse: "Unser Haus",

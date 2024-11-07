@@ -7,8 +7,9 @@ function Landing() {
 
     return (
         <div id={styles['container']}>
-            <p id={styles['text']}>{t("bookingText")}</p>
-
+            <p id={styles['subHeadline']}>{t("landingSubHeadline")}</p>
+            <p id={styles['text']}>{t("landingText")}</p>
+            <img src={require("../assets/landing.png")}/>
         </div>
     )
 }

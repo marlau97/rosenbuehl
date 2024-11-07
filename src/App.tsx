@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AppContext } from "./Provider";
 import Header from "./Header/Header";
-import Landing from "./Booking/Landing";
+import Landing from "./Landing/Landing";
 import Footer from "./Footer/Footer";
 import "./App.css";
 import Privacy from "./Privacy/Privacy";
