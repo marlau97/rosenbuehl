@@ -1,10 +1,34 @@
+#headline {
+    color: aliceblue;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    font-size: 2.5em;
+}
+
+#subHeadline {
+    color: aliceblue;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
 #text {
     color: aliceblue;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    font-size: 1.1em;
+    padding: 2px;
+    white-space: break-spaces;
 }
 
 #container {
     height: 100%;
     overflow: auto;
+}
+
+a {
+    color: #93deff;
+}
+
+a:hover {
+    color: #5fa1ff;
 }

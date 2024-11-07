@@ -50,8 +50,28 @@ i18n
                     location: "Location",
                     ourHouse: "Our House",
                     tripTips: "Tips for your trip",
-                    legal: "Contact and Legal notice",
+                    legal: "Legal notice and Contact",
                     dataPrivacy: "Data Privacy",
+                    address: "Haus Rosenbühl Privatvermietung\n" +
+                        "Jutta Lautenschlager-Rühle\n" +
+                        "Fleckl - Stechenberg 3\n" +
+                        "95485 Warmensteinach\n" +
+                        "Phone: +49 170 4787138\n",
+                    email: "Email: ",
+                    responsible: "Responsible for content according to § 10, paragraph 3 MDStV:\n" +
+                        "Jutta Lautenschlager-Rühle (address as above)",
+                    liabilityNotice: "Liability Notice",
+                    contentControlled: "Despite careful content control, we accept no liability for the content of external links.\n" +
+                        "The operators of the linked pages are solely responsible for their content.",
+                    disputeResolution: "Online Dispute Resolution in accordance with Art. 14(1) ODR-VO",
+                    disputeText: "The European Commission provides a platform for online dispute resolution (ODR).\n" +
+                        "Accessible at: ",
+                    complaintText: "For complaints related to insurance mediation, you can contact:",
+                    addressInsurance: "Versicherungsombudsmann e.V.\n" +
+                        "Postfach 080632, 10006 Berlin\n" +
+                        "Phone: 0800 3696000\n" +
+                        "Fax: 0800 3699000\n" +
+                        "E-Mail: beschwerde@versicherungsombudsmann.de",
                 },
             },
 
@@ -67,6 +87,26 @@ i18n
                     tripTips: "Ausflugstipps",
                     legal: "Impressum und Kontakt",
                     dataPrivacy: "Datenschutz",
+                    address: "Haus Rosenbühl Privatvermietung\n" +
+                        "Jutta Lautenschlager-Rühle\n" +
+                        "Fleckl - Stechenberg 3\n" +
+                        "95485 Warmensteinach\n" +
+                        "Telefon: +49 170 4787138\n",
+                    email: "Email: ",
+                    responsible: "Inhaltlich Verantwortlicher gemäß § 10 Absatz 3 MDStV:\n" +
+                    "Jutta Lautenschlager-Rühle (Anschrift wie oben)",
+                    liabilityNotice: "Haftungshinweis",
+                    contentControlled: "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links.\n" +
+                        " Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.",
+                    disputeResolution: "Online-Streitbeilegung gemäß Art. 14 Abs. 1 ODR-VO",
+                    disputeText: "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit.\n" +
+                        "Diese finden Sie unter: ",
+                    complaintText: "Bei Beschwerden im Zusammenhang mit der Versicherungsvermittlung wenden Sie sich an:",
+                    addressInsurance: "Versicherungsombudsmann e.V.\n" +
+                        "Postfach 080632, 10006 Berlin\n" +
+                        "Telefon: 0800 3696000\n" +
+                        "Fax: 0800 3699000\n" +
+                        "E-Mail: beschwerde@versicherungsombudsmann.de",
                 },
             },
         },
