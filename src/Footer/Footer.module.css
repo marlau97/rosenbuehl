@@ -1,0 +1,41 @@
+#button {
+    padding: 13px;
+    font-size: 28px;
+    border-radius: 8px;
+    border-color: white;
+    color: white;
+    background-color: #003b94;
+    margin-right: 0.5vw;
+}
+
+#button:hover {
+    background-color: #3a7de3;
+    color: white;
+    cursor: pointer;
+    border-color: antiquewhite;
+}
+
+#footerRight {
+    display: flex;
+    width: 20vw;
+    align-items: center;
+    justify-content: right;
+}
+
+#footerCenter {
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footerLeft {
+    display: flex;
+    width: 20vw;
+}
+
+#footerContainer {
+    height: 80px;
+    background-color: antiquewhite;
+    display: flex;
+}

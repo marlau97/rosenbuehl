@@ -1,0 +1,7 @@
+#sidebarContainer {
+    position: absolute;
+    width: 16vw;
+    height: calc(100vh - 60px - 80px);
+    background-color: black;
+    background: rgb(0, 0, 0, 0.4);
+}

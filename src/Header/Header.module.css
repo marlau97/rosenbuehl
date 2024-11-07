@@ -1,13 +1,46 @@
-#header {
+#headerContainer {
+    height: 60px;
     background-color: antiquewhite;
-    text-align: center;
+    display: flex;
+}
+
+#headerRight {
+    width: 20vw;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 0.5vw;
+}
+
+#headerCenter {
+    width: 60vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    width: 100%;
+}
+
+#headerLeft {
+    width: 20vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 0.5vw;
 }
 
 #headerText {
     color: darkslategrey;
+    font-size: 3em;
+}
+
+.sidebar {
+    position: absolute;
+    margin-top: 60px;
+    left: -16vw; /* Start außerhalb des Bildschirms */
+    width: 16vw;
+    height: calc(100vh - 60px - 80px);
+    transition: transform 0.1s ease-in-out;
+}
+
+.sidebar.open {
+    transform: translateX(16vw); /* Sidebar nach rechts verschieben */
 }
