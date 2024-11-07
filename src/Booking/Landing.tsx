@@ -1,16 +1,16 @@
-import styles from './Booking.module.css'
+import styles from './Landing.module.css'
 import {useTranslation} from "react-i18next";
 
-function Booking() {
+function Landing() {
 
     const { t } = useTranslation();
 
     return (
-        <div>
+        <div id={styles['container']}>
             <p id={styles['text']}>{t("bookingText")}</p>
 
         </div>
     )
 }
 
-export default Booking;
+export default Landing;
