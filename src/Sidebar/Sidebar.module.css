@@ -3,5 +3,32 @@
     width: 16vw;
     height: calc(100vh - 60px - 80px);
     background-color: black;
-    background: rgb(0, 0, 0, 0.4);
+    background: rgb(0, 0, 0, 0.58);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.optionText {
+    font-size: 1.6em;
+    text-align: center;
+    margin-top: 2.4em;
+    padding: 4px;
+    color: antiquewhite;
+}
+
+.optionText:hover {
+    cursor: pointer;
+}
+
+.bigText {
+    text-align: center;
+    margin-top: 2em;
+    padding: 2px;
+    color: bisque;
+    font-size: 1.9em;
+    font-weight: bold;
+}
+
+.bigText:hover {
+    cursor: pointer;
 }

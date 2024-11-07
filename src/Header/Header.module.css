@@ -38,7 +38,7 @@
     left: -16vw; /* Start außerhalb des Bildschirms */
     width: 16vw;
     height: calc(100vh - 60px - 80px);
-    transition: transform 0.1s ease-in-out;
+    transition: transform 0.15s ease-in-out;
 }
 
 .sidebar.open {

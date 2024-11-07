@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { supportedLngs } from "./config";
+import styles from "./LocaleSwitcher.module.css"
 
 export default function LocaleSwitcher() {
     const { i18n } = useTranslation();
@@ -7,7 +8,7 @@ export default function LocaleSwitcher() {
     return (
         <div className="flex items-center">
             <div className="locale-switcher">
-                <select style={{textAlign: "center"}}
+                <select id={styles['dropdown']}
                     value={i18n.resolvedLanguage}
                     onChange={(e) => i18n.changeLanguage(e.target.value)}
                 >

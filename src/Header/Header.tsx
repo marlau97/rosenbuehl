@@ -12,7 +12,7 @@ function Header() {
     return (
         <div id={styles['headerContainer']}>
             <div id={styles['headerLeft']}>
-                <Hamburger toggled={isOpen} toggle={setOpen} />
+                <Hamburger toggled={isOpen} toggle={setOpen} duration={0.15}/>
             </div>
             <div id={styles['headerCenter']}>
                 <h1 id={styles['headerText']}>{t("houseRosenbuehl")}</h1>
