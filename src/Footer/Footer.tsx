@@ -12,8 +12,13 @@ export default function Footer() {
                 <img src={logo} height={50} alt="Haus Rosenbühl"/>
             </div>
             <div id={styles["footerRight"]}>
-                <a href="https://www.booking.com/hotel/de/haus-rosenbuhl-warmensteinach1.de.html?">
-                    <button id={styles['button']}>{t("bookNow")}</button>
+                <a
+                    id={styles['button']}
+                    href="https://www.booking.com/hotel/de/haus-rosenbuhl-warmensteinach1.de.html?"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    {t("bookNow")}
                 </a>
             </div>
         </div>
