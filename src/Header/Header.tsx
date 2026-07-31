@@ -2,26 +2,63 @@ import styles from './Header.module.css'
 import LocaleSwitcher from "../i18n/LocaleSwitcher";
 import { useTranslation } from "react-i18next";
 import Hamburger from 'hamburger-react';
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Sidebar from "../Sidebar/Sidebar";
+import ThemeToggle from "./ThemeToggle";
 
 function Header() {
     const [isOpen, setOpen] = useState(false);
     const { t } = useTranslation();
+    const sidebarRef = useRef<HTMLDivElement>(null);
+    const menuButtonRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (!isOpen) {
+            return;
+        }
+
+        const closeOnOutsideInteraction = (event: PointerEvent) => {
+            const target = event.target as Node;
+
+            if (!sidebarRef.current?.contains(target) && !menuButtonRef.current?.contains(target)) {
+                setOpen(false);
+            }
+        };
+
+        const closeOnEscape = (event: KeyboardEvent) => {
+            if (event.key === "Escape") {
+                setOpen(false);
+            }
+        };
+
+        document.addEventListener("pointerdown", closeOnOutsideInteraction);
+        document.addEventListener("keydown", closeOnEscape);
+
+        return () => {
+            document.removeEventListener("pointerdown", closeOnOutsideInteraction);
+            document.removeEventListener("keydown", closeOnEscape);
+        };
+    }, [isOpen]);
 
     return (
         <div id={styles['headerContainer']}>
-            <div id={styles['headerLeft']}>
-                <Hamburger toggled={isOpen} toggle={setOpen} duration={0.15}/>
+            <div id={styles['headerLeft']} ref={menuButtonRef}>
+                <Hamburger toggled={isOpen} toggle={setOpen} duration={0.15} color="#edf0ea"/>
             </div>
             <div id={styles['headerCenter']}>
                 <h1 id={styles['headerText']}>{t("houseRosenbuehl")}</h1>
             </div>
             <div id={styles['headerRight']}>
                 <LocaleSwitcher />
+                <ThemeToggle />
             </div>
-            <div className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
-                <Sidebar />
+            <div
+                ref={sidebarRef}
+                className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}
+                aria-hidden={!isOpen}
+                inert={!isOpen}
+            >
+                <Sidebar onNavigate={() => setOpen(false)} />
             </div>
         </div>
     );

@@ -24,6 +24,14 @@ i18n
         debug: true,
 
         supportedLngs: Object.keys(supportedLngs),
+
+        // Detect the browser language without persisting it in cookies or
+        // browser storage. This keeps language selection cookie-free.
+        detection: {
+            order: ["navigator", "htmlTag"],
+            caches: [],
+        },
+
         // Normally, we want `escapeValue: true` as it
         // ensures that i18next escapes any code in
         // translation messages, safeguarding against
@@ -57,6 +65,9 @@ i18n
                     tripTips: "Tips for your trip",
                     legal: "Legal notice and Contact",
                     dataPrivacy: "Data Privacy",
+                    bookNow: "Book now",
+                    switchToDarkMode: "Switch to dark mode",
+                    switchToLightMode: "Switch to light mode",
                     address: "Haus Rosenbühl Privatvermietung\n" +
                         "Jutta Lautenschlager-Rühle\n" +
                         "Fleckl - Stechenberg 3\n" +
@@ -97,6 +108,9 @@ i18n
                     tripTips: "Ausflugstipps",
                     legal: "Impressum und Kontakt",
                     dataPrivacy: "Datenschutz",
+                    bookNow: "Jetzt buchen",
+                    switchToDarkMode: "Zum dunklen Design wechseln",
+                    switchToLightMode: "Zum hellen Design wechseln",
                     address: "Haus Rosenbühl Privatvermietung\n" +
                         "Jutta Lautenschlager-Rühle\n" +
                         "Fleckl - Stechenberg 3\n" +

@@ -1,10 +1,118 @@
-#text {
-    color: aliceblue;
-    padding-top: 50px;
-    padding-bottom: 50px;
+.container {
+    height: 100%;
+    padding: 28px clamp(16px, 4vw, 56px) 40px;
+    overflow-y: auto;
+    color: var(--theme-text-secondary);
+    text-align: left;
 }
 
-#container {
-    height: 100%;
-    overflow: auto;
+.introduction,
+.policy {
+    max-width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.introduction {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.introduction h1 {
+    margin-bottom: 12px;
+    color: var(--theme-text);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
+.introduction p {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.introduction small {
+    color: var(--theme-text-secondary);
+}
+
+.section {
+    padding: 22px 0;
+    border-top: 1px solid var(--theme-card-border);
+}
+
+.section h2 {
+    margin-bottom: 12px;
+    color: var(--theme-text);
+    font-size: 1.35rem;
+}
+
+.section p {
+    margin: 9px 0;
+    line-height: 1.65;
+    white-space: pre-line;
+}
+
+.section ul {
+    margin: 12px 0 0;
+    padding-left: 1.35rem;
+}
+
+.section li {
+    margin: 7px 0;
+    line-height: 1.5;
+}
+
+.section li::marker {
+    color: var(--color-copper);
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    padding-top: 22px;
+    border-top: 1px solid var(--theme-card-border);
+}
+
+.links a {
+    color: var(--theme-link);
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.links a:hover {
+    color: var(--color-copper);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 16px 28px;
+    }
+
+    .introduction {
+        margin-bottom: 18px;
+    }
+
+    .introduction h1 {
+        font-size: 1.8rem;
+    }
+
+    .introduction p,
+    .section p,
+    .section li {
+        font-size: 0.96rem;
+    }
+
+    .section {
+        padding: 18px 0;
+    }
+
+    .section h2 {
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+
+    .links {
+        flex-direction: column;
+    }
 }

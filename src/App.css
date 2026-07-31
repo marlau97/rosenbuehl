@@ -1,5 +1,21 @@
+.appShell {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+}
+
 .content {
+    flex: 1;
+    min-height: 0;
     text-align: center;
-    background-color: darkslategrey;
-    height: calc(100vh - 60px - 80px);
+    background-color: var(--theme-page);
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .content {
+        text-align: left;
+    }
 }

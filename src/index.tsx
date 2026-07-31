@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import { AppProvider } from './Provider';
 import './i18n/config';
-import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -16,5 +15,3 @@ root.render(
         </AppProvider>
     </React.StrictMode>
 );
-
-reportWebVitals();
