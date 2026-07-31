@@ -33,6 +33,12 @@
     padding-left: 0.5vw;
 }
 
+.menuTrigger {
+    display: inline-flex;
+    width: fit-content;
+    height: fit-content;
+}
+
 #headerText {
     color: var(--theme-header-text);
     font-size: clamp(2rem, 3vw, 3rem);

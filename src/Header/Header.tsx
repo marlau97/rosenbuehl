@@ -11,6 +11,26 @@ function Header() {
     const { t } = useTranslation();
     const sidebarRef = useRef<HTMLDivElement>(null);
     const menuButtonRef = useRef<HTMLDivElement>(null);
+    const hoverCloseTimer = useRef<number | null>(null);
+
+    const clearHoverClose = () => {
+        if (hoverCloseTimer.current !== null) {
+            window.clearTimeout(hoverCloseTimer.current);
+            hoverCloseTimer.current = null;
+        }
+    };
+
+    const openOnHover = () => {
+        if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+        clearHoverClose();
+        setOpen(true);
+    };
+
+    const closeAfterHover = () => {
+        if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+        clearHoverClose();
+        hoverCloseTimer.current = window.setTimeout(() => setOpen(false), 140);
+    };
 
     useEffect(() => {
         if (!isOpen) {
@@ -40,10 +60,21 @@ function Header() {
         };
     }, [isOpen]);
 
+    useEffect(() => () => clearHoverClose(), []);
+
     return (
         <div id={styles['headerContainer']}>
-            <div id={styles['headerLeft']} ref={menuButtonRef}>
-                <Hamburger toggled={isOpen} toggle={setOpen} duration={0.15} color="#edf0ea"/>
+            <div
+                id={styles['headerLeft']}
+            >
+                <div
+                    ref={menuButtonRef}
+                    className={styles.menuTrigger}
+                    onPointerEnter={openOnHover}
+                    onPointerLeave={closeAfterHover}
+                >
+                    <Hamburger toggled={isOpen} toggle={setOpen} duration={0.15} color="#edf0ea"/>
+                </div>
             </div>
             <div id={styles['headerCenter']}>
                 <h1 id={styles['headerText']}>{t("houseRosenbuehl")}</h1>
@@ -57,6 +88,8 @@ function Header() {
                 className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}
                 aria-hidden={!isOpen}
                 inert={!isOpen}
+                onPointerEnter={openOnHover}
+                onPointerLeave={closeAfterHover}
             >
                 <Sidebar onNavigate={() => setOpen(false)} />
             </div>
