@@ -8,7 +8,7 @@ function Landing() {
 
     return (
         <div id={styles['container']}>
-            <p id={styles['subHeadline']}>{t("landingSubHeadline")}</p>
+            <h1 id={styles['subHeadline']}>{t("landingSubHeadline")}</h1>
             <p id={styles['text']}>{t("landingText")}</p>
             <img src={landingImage} alt="Haus Rosenbühl"/>
         </div>

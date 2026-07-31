@@ -41,7 +41,7 @@
 .introduction h1 {
     margin-bottom: 8px;
     color: var(--theme-text);
-    font-size: clamp(1.9rem, 4vw, 2.65rem);
+    font-size: clamp(2rem, 4vw, 2.8rem);
 }
 
 .introduction p {
@@ -97,7 +97,7 @@
     }
 
     .introduction h1 {
-        font-size: 1.75rem;
+        font-size: 1.8rem;
     }
 
     .floorPlan img {
