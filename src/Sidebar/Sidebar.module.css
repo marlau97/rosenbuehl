@@ -1,33 +1,63 @@
 #sidebarContainer {
     position: absolute;
-    width: 16vw;
-    height: calc(100vh - 60px - 80px);
-    background: rgb(0, 0, 0, 0.75);
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+    padding: 18px 10px;
+    overflow-y: auto;
+    background: rgba(33, 55, 47, 0.96);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
-.optionText {
-    font-size: 1.6em;
-    text-align: center;
-    margin-top: 5vh;
-    padding: 4px;
-    color: antiquewhite;
-}
-
-.optionText:hover {
+.option,
+.activeOption {
+    width: 100%;
+    min-height: 48px;
+    padding: 9px 10px;
+    color: var(--color-fog);
+    background: transparent;
+    border: 0;
+    border-radius: 6px;
     cursor: pointer;
+    font-size: clamp(1rem, 1.6vw, 1.6rem);
+    text-align: center;
+    transition: background-color 0.15s ease;
 }
 
-.bigText {
-    text-align: center;
-    margin-top: 4vh;
-    padding: 4px;
-    color: bisque;
-    font-size: 1.8em;
+.option:hover {
+    background-color: rgba(237, 240, 234, 0.08);
+}
+
+.activeOption {
+    color: var(--color-fog);
+    background-color: rgba(101, 116, 94, 0.72);
     font-weight: bold;
 }
 
-.bigText:hover {
-    cursor: pointer;
+.option:focus-visible,
+.activeOption:focus-visible {
+    outline: 2px solid var(--color-stone);
+    outline-offset: -2px;
+}
+
+@media (max-width: 768px) {
+    #sidebarContainer {
+        gap: 6px;
+        padding: 12px 10px;
+        background: rgba(33, 55, 47, 0.98);
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        box-shadow: 8px 0 24px rgba(33, 55, 47, 0.28);
+    }
+
+    .option,
+    .activeOption {
+        min-height: 46px;
+        font-size: 1.12rem;
+        text-align: left;
+    }
 }

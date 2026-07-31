@@ -21,7 +21,7 @@ const App: React.FC = () => {
     const { pageToShow } = context;
 
     return (
-        <div>
+        <div className="appShell">
             <Header />
             <div className="content">
                 {pageToShow === 'landing' && <Landing />}

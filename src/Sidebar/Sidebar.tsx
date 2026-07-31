@@ -2,8 +2,23 @@ import { useContext } from "react";
 import { AppContext } from "../Provider";
 import { useTranslation } from "react-i18next";
 import styles from './Sidebar.module.css';
+import type { Page } from "../Provider";
 
-const Sidebar: React.FC = () => {
+type SidebarProps = {
+    onNavigate?: () => void;
+};
+
+const navigationItems: Array<{ page: Page; label: string }> = [
+    { page: "landing", label: "landingPage" },
+    { page: "apartment", label: "vacationApartments" },
+    { page: "location", label: "location" },
+    { page: "house", label: "ourHouse" },
+    { page: "tips", label: "tripTips" },
+    { page: "legal", label: "legal" },
+    { page: "privacy", label: "dataPrivacy" },
+];
+
+const Sidebar: React.FC<SidebarProps> = ({ onNavigate }) => {
     const { t } = useTranslation();
     const context = useContext(AppContext);
 
@@ -13,20 +28,25 @@ const Sidebar: React.FC = () => {
 
     const { pageToShow, setPageToShow } = context;
 
-    const getClassName = (option: string) => {
-        return pageToShow === option ? styles.bigText : styles.optionText;
+    const navigateTo = (page: Page) => {
+        setPageToShow(page);
+        onNavigate?.();
     };
 
     return (
-        <div id={styles['sidebarContainer']}>
-            <p className={getClassName('landing')} onClick={() => setPageToShow('landing')}>{t("landingPage")}</p>
-            <p className={getClassName('apartment')} onClick={() => setPageToShow('apartment')}>{t("vacationApartments")}</p>
-            <p className={getClassName('location')} onClick={() => setPageToShow('location')}>{t("location")}</p>
-            <p className={getClassName('house')} onClick={() => setPageToShow('house')}>{t("ourHouse")}</p>
-            <p className={getClassName('tips')} onClick={() => setPageToShow('tips')}>{t("tripTips")}</p>
-            <p className={getClassName('legal')} onClick={() => setPageToShow('legal')}>{t("legal")}</p>
-            <p className={getClassName('privacy')} onClick={() => setPageToShow('privacy')}>{t("dataPrivacy")}</p>
-        </div>
+        <nav id={styles.sidebarContainer} aria-label="Main navigation">
+            {navigationItems.map(({ page, label }) => (
+                <button
+                    type="button"
+                    key={page}
+                    className={pageToShow === page ? styles.activeOption : styles.option}
+                    aria-current={pageToShow === page ? "page" : undefined}
+                    onClick={() => navigateTo(page)}
+                >
+                    {t(label)}
+                </button>
+            ))}
+        </nav>
     );
 };
 

@@ -1,18 +1,18 @@
 #button {
-    padding: 13px;
-    font-size: 28px;
+    padding: 8px 14px;
+    font-size: 20px;
     border-radius: 50px;
-    border-color: white;
-    color: white;
-    background-color: #003b94;
+    border: 1px solid var(--color-copper);
+    color: var(--color-fog);
+    background-color: var(--color-copper);
     margin-right: 0.5vw;
 }
 
 #button:hover {
-    background-color: #3a7de3;
-    color: white;
+    background-color: var(--color-bark);
+    color: var(--color-fog);
     cursor: pointer;
-    border-color: antiquewhite;
+    border-color: var(--color-bark);
 }
 
 #footerRight {
@@ -35,7 +35,48 @@
 }
 
 #footerContainer {
-    height: 80px;
-    background-color: antiquewhite;
+    flex: 0 0 var(--footer-height);
+    height: var(--footer-height);
+    background-color: var(--theme-footer);
+    border-top: 1px solid var(--theme-divider);
+    box-shadow: 0 -2px 10px rgba(15, 29, 23, 0.12);
     display: flex;
+}
+
+@media (max-width: 768px) {
+    #footerContainer {
+        align-items: center;
+        gap: 8px;
+        padding: 0 10px env(safe-area-inset-bottom);
+    }
+
+    #footerLeft {
+        display: none;
+    }
+
+    #footerCenter {
+        width: auto;
+        flex: 1;
+        justify-content: flex-start;
+    }
+
+    #footerCenter img {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+    }
+
+    #footerRight {
+        width: auto;
+        flex: 0 0 auto;
+    }
+
+    #button {
+        min-height: 44px;
+        margin-right: 0;
+        padding: 9px 16px;
+        border-radius: 22px;
+        font-size: 1rem;
+        font-weight: bold;
+    }
 }

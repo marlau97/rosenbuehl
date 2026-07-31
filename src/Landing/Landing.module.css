@@ -1,5 +1,5 @@
 #text {
-    color: aliceblue;
+    color: var(--theme-text-secondary);
     font-size: 2vh;
     padding: 4px;
     line-height: 3vh;
@@ -10,18 +10,54 @@
 #container {
     height: 100%;
     overflow: auto;
+    padding: 0 16px 20px;
+}
+
+#container img {
+    display: block;
+    width: min(760px, 100%);
+    height: auto;
+    max-height: 48vh;
+    margin: 0 auto;
+    object-fit: contain;
 }
 
 #headline {
-    color: aliceblue;
+    color: var(--theme-text);
     padding-top: 2vh;
     padding-bottom: 2vh;
     font-size: 2.5em;
 }
 
 #subHeadline {
-    color: aliceblue;
+    color: var(--theme-text);
     padding-top: 2vh;
     padding-bottom: 2vh;
     font-size: 2.5em;
+}
+
+@media (max-width: 768px) {
+    #container {
+        padding: 0 16px 18px;
+    }
+
+    #subHeadline {
+        padding: 18px 0 10px;
+        font-size: clamp(1.55rem, 7vw, 2rem);
+        line-height: 1.15;
+        text-align: center;
+    }
+
+    #text {
+        padding: 0 0 18px;
+        font-size: 1rem;
+        line-height: 1.55;
+        text-align: left;
+    }
+
+    #container img {
+        width: 100%;
+        max-height: 38vh;
+        border-radius: 8px;
+    }
 }
