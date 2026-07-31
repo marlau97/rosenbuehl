@@ -53,12 +53,7 @@ function OurHouse() {
     }
 
     const openApartment = (apartmentId: "ochsenkopf" | "schneeberg") => {
-        appContext.setPageToShow("apartment");
-        window.location.hash = apartmentId;
-
-        window.setTimeout(() => {
-            document.getElementById(apartmentId)?.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 0);
+        appContext.setPageToShow(apartmentId === "ochsenkopf" ? "apartment-ochsenkopf" : "apartment-schneeberg");
     };
 
     return (

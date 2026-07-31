@@ -6,6 +6,7 @@ import Footer from "./Footer/Footer";
 import "./App.css";
 import Privacy from "./Privacy/Privacy";
 import Apartments from "./Apartments/Apartments";
+import ApartmentDetail from "./Apartments/ApartmentDetail";
 import Location from "./Location/Location";
 import OurHouse from "./OurHouse/OurHouse";
 import TripTips from "./TripTips/TripTips";
@@ -26,6 +27,8 @@ const App: React.FC = () => {
             <div className="content">
                 {pageToShow === 'landing' && <Landing />}
                 {pageToShow === 'apartment' && <Apartments />}
+                {pageToShow === 'apartment-ochsenkopf' && <ApartmentDetail apartment="ochsenkopf" />}
+                {pageToShow === 'apartment-schneeberg' && <ApartmentDetail apartment="schneeberg" />}
                 {pageToShow === 'location' && <Location />}
                 {pageToShow === 'house' && <OurHouse />}
                 {pageToShow === 'tips' && <TripTips />}

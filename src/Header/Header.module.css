@@ -29,6 +29,8 @@
 }
 
 #headerLeft {
+    width: 16vw;
+    height: 100%;
     justify-content: flex-start;
     padding-left: 0.5vw;
 }
@@ -71,6 +73,10 @@
     #headerCenter {
         min-width: 0;
         padding: 0;
+    }
+
+    #headerLeft {
+        width: min(50vw, 280px);
     }
 
     #headerCenter {

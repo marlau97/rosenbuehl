@@ -60,6 +60,10 @@ i18n
                         "Enjoy fresh air, hiking trails just outside your door, and proximity to local attractions.\n" +
                         "Leave the everyday behind and create unforgettable memories in the heart of Warmensteinach.",
                     vacationApartments: "Holiday Apartments",
+                    apartmentOchsenkopf: "Ochsenkopf apartment",
+                    apartmentSchneeberg: "Schneeberg apartment",
+                    expandApartments: "Show apartment pages",
+                    collapseApartments: "Hide apartment pages",
                     location: "Location",
                     locationRegion: "Fichtel Mountains",
                     locationHeadline: "Our location",
@@ -119,6 +123,10 @@ i18n
                         "Genießen Sie die frische Luft, Wanderwege direkt vor der Tür und die Nähe zu Sehenswürdigkeiten.\n" +
                         "Lassen Sie den Alltag hinter sich und erleben Sie eine unvergessliche Zeit im Herzen von Warmensteinach.",
                     vacationApartments: "Ferienwohnungen",
+                    apartmentOchsenkopf: "Ferienwohnung Ochsenkopf",
+                    apartmentSchneeberg: "Ferienwohnung Schneeberg",
+                    expandApartments: "Wohnungsseiten anzeigen",
+                    collapseApartments: "Wohnungsseiten ausblenden",
                     location: "Lage",
                     locationRegion: "Fichtelgebirge",
                     locationHeadline: "Unsere Lage",

@@ -1,6 +1,6 @@
 import React, { createContext, useState, ReactNode } from "react";
 
-export type Page = 'landing' | 'apartment' | 'location' | 'house' | 'tips' | 'legal' | 'privacy';
+export type Page = 'landing' | 'apartment' | 'apartment-ochsenkopf' | 'apartment-schneeberg' | 'location' | 'house' | 'tips' | 'legal' | 'privacy';
 
 type AppContextType = {
     pageToShow: Page;

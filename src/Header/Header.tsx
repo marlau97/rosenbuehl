@@ -66,12 +66,13 @@ function Header() {
         <div id={styles['headerContainer']}>
             <div
                 id={styles['headerLeft']}
+                onPointerEnter={clearHoverClose}
+                onPointerLeave={closeAfterHover}
             >
                 <div
                     ref={menuButtonRef}
                     className={styles.menuTrigger}
                     onPointerEnter={openOnHover}
-                    onPointerLeave={closeAfterHover}
                 >
                     <Hamburger toggled={isOpen} toggle={setOpen} duration={0.15} color="#edf0ea"/>
                 </div>
